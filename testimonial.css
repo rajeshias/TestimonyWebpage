@@ -1,0 +1,295 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: arial;
+    place-items: center;
+}
+@import url('https://fonts.googleapis.com/css?family=Lato:400,500,600,700&display=swap');
+
+.wrapper{
+  display: inline-flex;
+  background: #fff;
+  height: 100px;
+  width: 400px;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 5px;
+  padding: 20px 15px;
+}
+.wrapper .option{
+  background: #fff;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 10px;
+  border: 2px solid lightgrey;
+  transition: all 0.3s ease;
+}
+.wrapper .option .dot{
+  height: 20px;
+  width: 20px;
+  background: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+}
+.wrapper .option .dot::before{
+  position: absolute;
+  content: "";
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background: #0069d9;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(1.5);
+  transition: all 0.3s ease;
+}
+input[type="radio"]{
+  display: none;
+}
+#option-1:checked:checked ~ .option-1{
+  border-color: #0069d9;
+  background: #0069d9;
+}
+#option-2:checked:checked ~ .option-2{
+  border-color: #4CAF50;
+  background: #4CAF50;
+}
+#option-1:checked:checked ~ .option-1 .dot,
+#option-2:checked:checked ~ .option-2 .dot{
+  background: #fff;
+}
+#option-1:checked:checked ~ .option-1 .dot::before,
+#option-2:checked:checked ~ .option-2 .dot::before{
+  opacity: 1;
+  transform: scale(1);
+}
+.wrapper .option span{
+  font-size: 20px;
+  color: #808080;
+}
+#option-1:checked:checked ~ .option-1 span,
+#option-2:checked:checked ~ .option-2 span{
+  color: #fff;
+}
+.Man{
+    position: absolute;
+    width: 134px;
+    height: 32px;
+    left: 584px;
+    top: 452px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
+.center {
+    margin: 40px auto;
+    display: table;
+    width: 1111px;
+    left: 40px;
+    margin-top: 150px;
+    height: 46px;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.center2 {
+    margin: 0px auto;
+    display: table;
+    width: 1111px;
+    left: 40px;
+    font-family: Roboto;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.center3{
+    text-align: center;  
+    align-items: center;
+
+}
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+ .button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #8CC63F;
+  }
+  
+ .button1:hover {
+    background-color: #8CC63F;
+    color: white;
+  }
+  
+  .button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+  }
+  
+  .button2:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+  .submitfinal {
+    display: block;
+    width: 50%;
+    border: none;
+    margin: 30px auto;
+    background-color: #ddd;
+    color: whblackite;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    width: 20em;  height: 3em;
+     
+  }
+  
+  .submitfinal:hover:enabled {
+    background-color: #8CC63F;
+    color: white;
+  }
+  
+.logo{
+    position: absolute;
+    width: 140px;
+    height: 48.49px;
+    left: 40px;
+    top: 40px;
+}
+.star-rating form {
+    display: none;
+}
+.star-rating .thanks-msg {
+    display: none;
+    font-size: 20px;
+    margin: 40px auto;
+    color: #4caf50;
+    background-color: rgba(76, 175, 80, 0.1411764705882353);
+    padding: 8px 20px;
+    border-left: 3px solid #4caf50;
+    border-radius: 20px;
+}
+.star-rating input {
+    display: none;
+}
+.star-rating {
+    margin: 0px auto;
+    display: table;
+    width: 350px;
+    text-align: center;
+}
+.star-rating label {
+    padding: 10px;
+    float: right;
+    font-size: 44px;
+    color: #eee;
+}
+.star-rating input:not(:checked) ~ label:hover,
+.star-rating input:not(:checked) ~ label:hover ~ label {
+    color: #8CC63F;
+}
+.star-rating input:checked ~ label {
+    color: #8CC63F;
+}
+.star-rating form .rating-reaction:before {
+    width: 100%;
+    float: left;
+    color: #8CC63F;
+}
+.star-input{
+    margin: 50px auto;
+    display: table;
+    width: 350px;
+}
+.star-rating #rating-1:checked ~ form .rating-reaction:before {
+    content: "Poor";
+}
+.star-rating #rating-2:checked ~ form .rating-reaction:before {
+    content: "Below-Average";
+}
+.star-rating #rating-3:checked ~ form .rating-reaction:before {
+    content: "Good";
+}
+.star-rating #rating-4:checked ~ form .rating-reaction:before {
+    content: "Very good";
+}
+.star-rating #rating-5:checked ~ form .rating-reaction:before {
+    content: "Excellent";
+}
+.star-rating input:checked ~ form {
+    border-top: 1px solid #ddd;
+    width: 100%;
+    padding-top: 15px;
+    margin-top: 15px;
+    display: inline-block;
+}
+.star-rating form .rating-reaction {
+    font-size: 24px;
+    float: left;
+    text-transform: capitalize;
+}
+.star-rating form .submit-rating {
+    border: none;
+    outline: none;
+    background: #795548;
+    color: #8CC63F;
+    font-size: 18px;
+    border-radius: 4px;
+    padding: 5px 15px;
+    cursor: pointer;
+    float: right;
+}
+form .submit-rating {
+    position: absolute;
+    width: 400px;
+    height: 34px;
+    left: 532px;
+    top: 586px;
+
+    background: rgba(140, 198, 63, 0.7);
+    box-shadow: inset 0px 3px 0px rgba(140, 198, 63, 0.5);
+    border-radius: 7px;
+}
+.form{
+    place-items: center;
+    margin: 0px auto;
+    display: table;
+    width: 350px;
+    text-align: center;
+}
